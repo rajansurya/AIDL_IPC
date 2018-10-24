@@ -2,6 +2,7 @@ package domain.raj.user.com.flagtest;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
@@ -12,6 +13,9 @@ public class ActivityLife extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Intent intent = new Intent (Intent.ACTION_VIEW, Uri.parse("http://androidium.org"));
+        startActivity(intent);
+
         TextView dd=(TextView)findViewById(R.id.click);
         dd.setOnClickListener(new View.OnClickListener() {
             @Override
