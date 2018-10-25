@@ -135,6 +135,8 @@ public class ExternalRemoteServiceClientCall extends Activity {
                 Log.e(getClass().getSimpleName(), "RemoteException");
             }
         }
+
+
     }
 
 
