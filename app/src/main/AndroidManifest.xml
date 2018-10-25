@@ -10,11 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ActivityLife">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".ActivityLife2" />
         <activity android:name=".HelloWorld"
@@ -23,10 +19,18 @@
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:scheme="http" android:host="androidium.org"/>
+                <data android:scheme="http" android:host="google.com"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.other.pac.ExternalRemoteServiceClientCall" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <service android:name="com.other.pac.RemoteService" />
     </application>
 
 </manifest>

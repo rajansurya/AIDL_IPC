@@ -13,7 +13,7 @@ public class ActivityLife extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent intent = new Intent (Intent.ACTION_VIEW, Uri.parse("http://androidium.org"));
+        Intent intent = new Intent (Intent.ACTION_VIEW, Uri.parse("http://google.com"));
         startActivity(intent);
 
         TextView dd=(TextView)findViewById(R.id.click);
