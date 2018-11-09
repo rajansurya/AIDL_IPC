@@ -71,6 +71,12 @@ public class ExternalRemoteServiceClientCall extends Activity {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        new Asyncktask(ExternalRemoteServiceClientCall.this).execute();
+    }
+
     private void startService() {
         if (started) {
             Toast.makeText(ExternalRemoteServiceClientCall.this, "Service already started", Toast.LENGTH_SHORT).show();
