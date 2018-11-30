@@ -147,10 +147,11 @@ public class ExternalRemoteServiceClientCall extends Activity {
 
 
     class RemoteServiceConnection implements ServiceConnection {
-        public void onServiceConnected(ComponentName className,
-                                       IBinder boundService) {
+        public void onServiceConnected(ComponentName className, IBinder boundService) {
+
             remoteService = IRemoteBinder.Stub.asInterface((IBinder) boundService);
             Log.d(getClass().getSimpleName(), "onServiceConnected()");
+
         }
 
         public void onServiceDisconnected(ComponentName className) {
@@ -165,10 +166,7 @@ public class ExternalRemoteServiceClientCall extends Activity {
     private void updateServiceStatus() {
         String bindStatus = conn == null ? "unbound" : "bound";
         String startStatus = started ? "started" : "not started";
-        String statusText = "Service status: " +
-                bindStatus +
-                "," +
-                startStatus;
+        String statusText = "Service status: " + bindStatus + "," + startStatus;
         TextView t = (TextView) findViewById(R.id.serviceStatus);
         t.setText(statusText);
     }

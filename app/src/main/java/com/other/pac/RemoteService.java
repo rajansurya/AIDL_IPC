@@ -19,6 +19,12 @@ public class RemoteService extends Service {
         public int getCounter() throws RemoteException {
             return counter;
         }
+
+        @Override
+        public String returnName() throws RemoteException {
+            return null;
+        }
+
     };
 
     @Override

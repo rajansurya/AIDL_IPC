@@ -6,11 +6,10 @@ import android.content.DialogInterface;
 import android.os.AsyncTask;
 
 public class Asyncktask extends AsyncTask<Void, Integer, Boolean> {
-    public Context context;
-    ProgressDialog dialog;
+    private ProgressDialog dialog;
+
     Asyncktask(Context context) {
-        this.context = context;
-          dialog = new ProgressDialog(context);
+        dialog = new ProgressDialog(context);
     }
 
 
@@ -37,10 +36,10 @@ public class Asyncktask extends AsyncTask<Void, Integer, Boolean> {
 
     @Override
     protected Boolean doInBackground(Void... arg0) {
-        for (int i = 0; i < 1000001; i++) {
+        for (int i = 0; i < 100; i++) {
             try {
 //                Thread.sleep(100);
-                System.out.println("IIII "+i);
+                System.out.println("IIII " + i);
             } catch (Exception e) {
                 e.printStackTrace();
             }
