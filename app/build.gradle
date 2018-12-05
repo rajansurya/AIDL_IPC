@@ -26,7 +26,6 @@ android {
     }
     dataBinding {
         enabled = true
-        version '2.3.0'
     }
 }
 
@@ -49,20 +48,23 @@ dependencies {
 //    implementation "android.arch.lifecycle:common-java8:$lifecycle_version"
 
 //    implementation 'android.arch.lifecycle:extensions:' + rootProject.archLifecycleVersion;
-    implementation 'android.arch.persistence.room:runtime:' + rootProject.archRoomVersion;
-//    annotationProcessor "android.arch.lifecycle:compiler:" +    rootProject.archLifecycleVersion;
-    annotationProcessor "android.arch.persistence.room:compiler:" + rootProject.archRoomVersion;
+//    implementation 'android.arch.persistence.room:runtime:' + rootProject.archRoomVersion;
+//    annotationProcessor "android.arch.lifecycle:compiler:" + rootProject.archLifecycleVersion;
+//    annotationProcessor "android.arch.persistence.room:compiler:" + rootProject.archRoomVersion;
     implementation 'com.android.support:recyclerview-v7:' + rootProject.supportLibVersion;
+//
+//    implementation "android.arch.lifecycle:extensions:1.1.1"
+//
+//    testImplementation 'junit:junit:4.12'
+//
+//    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+//    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+//    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    implementation "android.arch.lifecycle:extensions:1.1.1"
-
-    testImplementation 'junit:junit:4.12'
-
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test:rules:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
-
-
+    implementation "android.arch.lifecycle:extensions:1.0.0-alpha4"
+    implementation "android.arch.persistence.room:runtime:1.0.0-alpha4"
+    annotationProcessor "android.arch.lifecycle:compiler:1.0.0-alpha4"
+    annotationProcessor "android.arch.persistence.room:compiler:1.0.0-alpha4"
+    annotationProcessor 'com.android.databinding:compiler:1.0-rc1'
 
 }

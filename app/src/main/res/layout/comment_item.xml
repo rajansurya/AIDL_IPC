@@ -19,7 +19,6 @@
         android:layout_marginStart="@dimen/comment_horizontal_margin"
         android:minHeight="@dimen/comment_minHeight"
 
-        android:onClick="@{() ->  callback.onClick(comment)}"
         android:orientation="horizontal"
         android:padding="8dp"
 
