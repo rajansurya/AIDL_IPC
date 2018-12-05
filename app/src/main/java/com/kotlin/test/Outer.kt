@@ -1,24 +1,33 @@
 package com.kotlin.test
 
 class Outer {
+    companion object SIG{
+
+    }
+    object SingletonA {
+
+    }
     private val bar: Int = 1
-   inner class Nested {
+
+    inner class Nested {
         fun foo() = bar
     }
+
     fun main() {
         val b = BaseImpl(10)
-        Derived(b).print()
+        Derived(b).printT()
     }
 }
-
 
 
 interface Base {
-    fun print()
+    fun printT()
 }
 
-class BaseImpl(val  x: Int) : Base {
-    override fun print() { print(x) }
+class BaseImpl(val x: Int) : Base {
+    override fun printT() {
+        printT()
+    }
 }
 
 class Derived(b: Base) : Base by b
